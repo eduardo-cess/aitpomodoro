@@ -1,0 +1,17 @@
+/* CSS declarations go here */
+nav{
+	background-color: #212121; 
+	
+}
+
+button{
+	margin: 10px;
+}
+
+.btn-pomodoro{
+	margin: 5px;
+}
+
+p{
+	text-align: justify;
+}

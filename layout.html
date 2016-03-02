@@ -1,0 +1,68 @@
+<template name="layout">
+	   <div></div>
+	<div class="navbar-fixed">
+	    <nav>
+	      <div class="nav-wrapper"  style="background-image: url('/logo-ait.gif');">
+	        <a href="/" class="brand-logo hide-on-large-only" style="font-weight: bold; color: black; font-style: italic;" >AIT</a>
+	        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+	        <ul class="side-nav" id="slide-out">
+	          <li><a href="pomodoro" class="linkmenu">Pomodoro</a></li>
+	          <li><a href="cronometro" class="linkmenu">Cronômetro</a></li>
+	        </ul>
+			<ul class="left hide-on-med-and-down">
+	          <li><a href="pomodoro" class="linkmenu">Pomodoro</a></li>
+	          <li><a href="cronometro" class="linkmenu">Cronômetro</a></li>
+	          <li><a href="http://ait-proeg.blogspot.com.br/" target="_blank">Mais em breve...</a></li>
+			</ul>
+	      </div>
+	    </nav>
+	</div>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	 {{>yield}}
+    
+    <footer style="background-color: #212121;" class="page-footer">
+          <div class="container">
+
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Sobre a AIT</h5>
+                <p class="grey-text text-lighten-4"> A AIT (Assessoria de Informação e Tecnologia) é uma consultoria em processos de produção e desenvolvimento de Sistemas, focada em conceitos e metodologias ágeis, buscando atender as necessidades em Tecnologia da Informação da Pró-Reitoria de Ensino de Graduação (PROEG) na Universidade Federal do Pará.</p>
+                <p class="grey-text text-lighten-4">Mais informações no nosso <a href="http://ait-proeg.blogspot.com.br/" target="_blank" title="Blog da AIT">Blog</a></p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+				  <div class="fb-page" data-href="https://www.facebook.com/aitproeg/" data-tabs="timeline" data-height="205" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/aitproeg/"><a href="https://www.facebook.com/aitproeg/">Ait-Proeg</a></blockquote></div>
+				  </div>
+                  <!-- <a href=""><img src="/github.png" style="margin-top: 30px" alt="github"></a> -->
+
+	            </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            Desenvolvido com <a href="https://www.meteor.com/" target="_blank">Meteor JS</a>
+
+            </div>
+          </div>
+    </footer>
+    <script type="text/javascript">
+	  	$(document).ready(function(){
+	  		$(".button-collapse").sideNav({
+		      //menuWidth: 300, // Default is 240
+		      edge: 'left', // Choose the horizontal origin
+		      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+			 });
+		    $('.collapsible').collapsible({
+		      accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+		    });
+	  	});
+    </script>
+</template>
